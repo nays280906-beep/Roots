@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="roots-token" content="__TEACHER_TOKEN__">
+<title>ROOTS · Teacher</title>
+<link rel="stylesheet" href="/css/fonts.css">
+<link rel="stylesheet" href="/css/teacher.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span id="logo"></span><div><b>ROOTS</b><small>Teacher control</small></div></div>
+  <div class="chips">
+    <span class="chip" id="chipServer" data-s="off"><i></i><span>Connecting…</span></span>
+    <span class="chip" id="chipStudent" data-s="off"><i></i><span>Student display: not open</span></span>
+  </div>
+  <div class="seg" role="group" aria-label="Language shown to students">
+    <button data-lang="en" type="button">English</button><button data-lang="hi" type="button">हिन्दी</button>
+  </div>
+</header>
+
+<main class="grid">
+  <section class="card controls" aria-label="Lesson controls">
+    <h2>Lesson controls</h2>
+    <div class="phase" id="phase">—</div>
+    <button class="btn primary big" data-act="start_lesson" data-key="S"><span>Start Lesson</span></button>
+    <div class="row">
+      <button class="btn" data-act="prev" data-key="←">← <span>Previous</span></button>
+      <button class="btn" data-act="next" data-key="→"><span id="nextLbl">Next</span> →</button>
+    </div>
+    <div class="row">
+      <button class="btn sky" data-act="start_quiz" data-key="Q"><span>Start Quiz</span></button>
+      <button class="btn yellow" data-act="hint" data-key="H"><span>Show Hint</span></button>
+    </div>
+    <button class="btn mint big" data-act="reveal" data-key="R"><span>Reveal Answer</span></button>
+    <button class="btn ghost" data-act="end_lesson" data-key="E"><span>End Lesson</span></button>
+    <button class="btn link" data-act="reset" hidden><span>Back to waiting screen</span></button>
+    <p class="keys">Keys: <kbd>←</kbd> <kbd>→</kbd> navigate · <kbd>Space</kbd> next / reveal · <kbd>H</kbd> hint · <kbd>R</kbd> reveal · <kbd>Q</kbd> quiz</p>
+  </section>
+
+  <section class="card now" aria-live="polite">
+    <h2>Now on the student screen</h2>
+    <div id="now"></div>
+    <div id="notes"></div>
+    <div id="key"></div>
+    <div id="slides"></div>
+  </section>
+
+  <section class="card display">
+    <h2>Student display</h2>
+    <p class="hint">Students see a separate, child-friendly screen. It never shows names, records, notes or the answer key.</p>
+    <button class="btn lav big" id="openWin" type="button"><span>Open student window</span></button>
+    <button class="btn" id="openFs" type="button"><span>Open full-screen display</span></button>
+    <button class="btn" id="openSplit" type="button"><span>Side-by-side test mode</span></button>
+    <p class="keys">With a projector: open the student window, drag it onto the projector screen, press <kbd>F11</kbd> or the Full screen button. On one screen only, use <kbd>Alt</kbd>+<kbd>Tab</kbd> to come back here.</p>
+  </section>
+</main>
+<div id="toast" class="toast" hidden></div>
+<script src="/js/visuals.js"></script>
+<script src="/js/common.js"></script>
+<script src="/js/teacher.js"></script>
+</body>
+</html>

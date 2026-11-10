@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROOTS · Side-by-side test mode</title><link rel="stylesheet" href="/css/fonts.css">
+<style>
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font:700 14px/1.3 "Nunito","Noto Sans Devanagari","Segoe UI",sans-serif;background:#E9F1EC;color:#2F3E46;display:grid;grid-template-rows:auto 1fr}
+header{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:8px 14px;background:#fff;border-bottom:2px solid #DCE8E1}
+header b{font-weight:900}header span{color:#5F7480}
+.sp{margin-left:auto;display:flex;gap:6px}
+button,a.b{font:inherit;font-weight:900;border:2px solid #DCE8E1;border-bottom-width:4px;background:#fff;border-radius:12px;padding:5px 12px;cursor:pointer;color:#2F3E46;text-decoration:none}
+button[aria-pressed=true]{background:#BDEBD2;border-color:#5CC596}
+.panes{display:grid;gap:10px;padding:10px;min-height:0}
+.panes.side{grid-template-columns:minmax(420px,5fr) 6fr}.panes.stack{grid-template-rows:1fr 1fr}
+.pane{display:grid;grid-template-rows:auto 1fr;min-height:0;min-width:0}
+.pane h3{margin:0 0 4px 6px;font-size:12px;text-transform:uppercase;letter-spacing:.07em;color:#5F7480}
+.frame{border-radius:18px;overflow:hidden;border:3px solid #fff;box-shadow:0 4px 0 rgba(47,62,70,.12);background:#fff;min-height:0;display:grid}
+.frame.proj{align-self:start}
+.frame iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+.side .frame.proj{aspect-ratio:16/9;width:100%;height:auto}.side .pane.s{align-content:start}
+</style></head>
+<body>
+<header><b>Side-by-side test mode</b><span>Left: teacher · Right: student display (shaped like a projector, 16:9). Two separate pages, one server.</span>
+<div class="sp"><button id="bSide" aria-pressed="true">Side by side</button><button id="bStack" aria-pressed="false">Stacked</button>
+<button id="bFs">Student pane full screen</button><a class="b" href="/">Menu</a></div></header>
+<div class="panes side" id="panes">
+  <div class="pane"><h3>Teacher window</h3><div class="frame"><iframe id="ft" src="/teacher" title="Teacher"></iframe></div></div>
+  <div class="pane s"><h3>Student display (projector preview)</h3><div class="frame proj" id="fp"><iframe id="fs" src="/student" title="Student display" allow="fullscreen" allowfullscreen></iframe></div></div>
+</div>
+<script>
+const P=document.getElementById("panes"),fp=document.getElementById("fp");
+function mode(m){P.className="panes "+m;bSide.setAttribute("aria-pressed",m==="side");bStack.setAttribute("aria-pressed",m==="stack");fp.classList.toggle("proj",m==="side")}
+bSide.onclick=()=>mode("side");bStack.onclick=()=>mode("stack");
+bFs.onclick=()=>document.getElementById("fs").requestFullscreen().catch(()=>alert("Your browser blocked full screen here. Use Start_Student_Fullscreen.bat instead."));
+</script></body></html>

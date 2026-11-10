@@ -1,0 +1,133 @@
+{
+  "id": "fractions_c5",
+  "grade": 5,
+  "subject": "Mathematics",
+  "is_sample": true,
+  "hindi_review_status": "DRAFT - needs review by a native Hindi-speaking teacher before classroom use",
+  "title": {"en": "Fractions: Parts of a Whole", "hi": "भिन्न: पूरे के हिस्से"},
+  "subtitle": {"en": "Class 5 · Mathematics", "hi": "कक्षा 5 · गणित"},
+  "slides": [
+    {
+      "id": "s1", "mood": "cheer",
+      "title": {"en": "Let's explore fractions!", "hi": "आइए भिन्नों को जानें!"},
+      "body": {
+        "en": ["A fraction is a part of a whole.", "Half a roti, a quarter of a field: these are all fractions!"],
+        "hi": ["भिन्न किसी पूरी चीज़ का एक हिस्सा होता है।", "आधी रोटी, खेत का चौथाई हिस्सा: ये सब भिन्न हैं!"]
+      },
+      "visual": {"type": "pie", "num": 1, "den": 2, "color": "peach"},
+      "notes": "Hold up a roti or a paper circle. Ask: if I share this equally between two friends, how much does each friend get?"
+    },
+    {
+      "id": "s2", "mood": "happy",
+      "title": {"en": "Numerator and denominator", "hi": "अंश और हर"},
+      "body": {
+        "en": ["The bottom number (denominator) tells how many equal parts the whole is cut into.", "The top number (numerator) tells how many parts we are talking about."],
+        "hi": ["नीचे की संख्या (हर) बताती है कि पूरे को कितने बराबर हिस्सों में बाँटा गया है।", "ऊपर की संख्या (अंश) बताती है कि हम कितने हिस्सों की बात कर रहे हैं।"]
+      },
+      "visual": {"type": "pie_label", "num": 3, "den": 4},
+      "notes": "Point at the circle: count all the parts first (4), then the coloured parts (3). Ask a child to say the fraction aloud."
+    },
+    {
+      "id": "s3", "mood": "think",
+      "title": {"en": "Equal parts only!", "hi": "हिस्से बराबर होने चाहिए!"},
+      "body": {
+        "en": ["A fraction needs EQUAL parts.", "Look closely: which roti is shared fairly?"],
+        "hi": ["भिन्न के लिए हिस्से बराबर होने चाहिए।", "ध्यान से देखिए: कौन-सी रोटी बराबर बाँटी गई है?"]
+      },
+      "visual": {"type": "equal_vs_unequal"},
+      "notes": "Common mistake: counting parts without checking they are equal. Fold a paper in equal and unequal ways to show it."
+    },
+    {
+      "id": "s4", "mood": "happy",
+      "title": {"en": "Fractions on a number line", "hi": "संख्या रेखा पर भिन्न"},
+      "body": {
+        "en": ["Fractions live between 0 and 1.", "Cut the line into 4 equal jumps. 3 jumps is 3/4."],
+        "hi": ["भिन्न 0 और 1 के बीच होते हैं।", "रेखा को 4 बराबर कदमों में बाँटिए। 3 कदम यानी 3/4।"]
+      },
+      "visual": {"type": "numberline", "den": 4, "mark": 3},
+      "notes": "Ask a child to hop 3 jumps along a line drawn on the floor."
+    },
+    {
+      "id": "s5", "mood": "encourage",
+      "title": {"en": "Which is bigger?", "hi": "कौन-सा बड़ा है?"},
+      "body": {
+        "en": ["When the denominators are the same, compare the numerators.", "4/5 is bigger than 2/5, because 4 parts is more than 2 parts."],
+        "hi": ["जब हर समान हों, तो अंशों की तुलना कीजिए।", "4/5, 2/5 से बड़ा है, क्योंकि 4 हिस्से, 2 हिस्सों से ज़्यादा होते हैं।"]
+      },
+      "visual": {"type": "compare_bars", "a": [2, 5], "b": [4, 5]},
+      "notes": "Only same-denominator comparison here. Unlike denominators come in a later lesson."
+    },
+    {
+      "id": "s6", "mood": "cheer",
+      "title": {"en": "Fractions in our village", "hi": "हमारे गाँव में भिन्न"},
+      "body": {
+        "en": ["A bamboo pole is cut into 8 equal pieces.", "3 pieces are used for a fence. That is 3/8 of the pole!"],
+        "hi": ["बाँस की एक डंडी को 8 बराबर टुकड़ों में काटा गया।", "3 टुकड़े बाड़ में लगे। यानी डंडी का 3/8 भाग!"]
+      },
+      "visual": {"type": "bar", "num": 3, "den": 8, "color": "mint"},
+      "notes": "Invite children to name other things shared in equal parts at home or in the village (a jackfruit, a field, a bundle of firewood)."
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "prompt": {"en": "A roti is cut into 4 equal parts. Ravi eats 1 part. What fraction did he eat?", "hi": "एक रोटी को 4 बराबर हिस्सों में काटा गया। रवि ने 1 हिस्सा खाया। रवि ने रोटी का कितना भाग खाया?"},
+      "visual": {"type": "pie", "num": 0, "den": 4, "color": "peach"},
+      "options": ["4/1", "1/4", "1/3", "3/4"],
+      "correct": 1,
+      "hints": [
+        {"en": "How many equal parts is the roti cut into? That number goes at the bottom.", "hi": "रोटी कितने बराबर हिस्सों में कटी है? वह संख्या नीचे (हर में) लिखी जाती है।"},
+        {"en": "Ravi ate 1 part. That number goes on top.", "hi": "रवि ने 1 हिस्सा खाया। वह संख्या ऊपर (अंश में) लिखी जाती है।"}
+      ],
+      "explanation": {"en": "The roti has 4 equal parts, so the denominator is 4. Ravi ate 1 part, so the numerator is 1. He ate 1/4.", "hi": "रोटी 4 बराबर हिस्सों में कटी है, इसलिए हर 4 है। रवि ने 1 हिस्सा खाया, इसलिए अंश 1 है। उसने रोटी का 1/4 भाग खाया।"}
+    },
+    {
+      "id": "q2",
+      "prompt": {"en": "What fraction of the circle is coloured?", "hi": "वृत्त का कितना भाग रंगा हुआ है?"},
+      "visual": {"type": "pie", "num": 3, "den": 8, "color": "sky"},
+      "options": ["5/8", "3/5", "8/3", "3/8"],
+      "correct": 3,
+      "hints": [
+        {"en": "First count all the equal parts of the circle.", "hi": "पहले वृत्त के सारे बराबर हिस्से गिनिए।"},
+        {"en": "Now count the coloured parts. The coloured parts go on top.", "hi": "अब रंगे हुए हिस्से गिनिए। रंगे हुए हिस्से ऊपर (अंश में) जाते हैं।"}
+      ],
+      "explanation": {"en": "The circle has 8 equal parts and 3 are coloured. So the fraction is 3/8.", "hi": "वृत्त में 8 बराबर हिस्से हैं और उनमें से 3 रंगे हैं। इसलिए भिन्न 3/8 है।"}
+    },
+    {
+      "id": "q3",
+      "prompt": {"en": "In the fraction 5/9, which number is the denominator?", "hi": "भिन्न 5/9 में हर कौन-सी संख्या है?"},
+      "visual": {"type": "pie", "num": 5, "den": 9, "color": "lavender"},
+      "options": ["9", "5", "4", "14"],
+      "correct": 0,
+      "hints": [
+        {"en": "The denominator is written below the fraction line.", "hi": "हर भिन्न की रेखा के नीचे लिखा जाता है।"},
+        {"en": "Look at the bottom number. It tells how many equal parts the whole has.", "hi": "नीचे की संख्या देखिए। वह बताती है कि पूरे के कितने बराबर हिस्से हैं।"}
+      ],
+      "explanation": {"en": "The denominator is the bottom number. In 5/9 the bottom number is 9, so the denominator is 9.", "hi": "हर नीचे की संख्या होती है। 5/9 में नीचे 9 है, इसलिए हर 9 है।"}
+    },
+    {
+      "id": "q4",
+      "prompt": {"en": "Which of these fractions is the greatest?", "hi": "इनमें से कौन-सा भिन्न सबसे बड़ा है?"},
+      "visual": null,
+      "options": ["3/7", "2/7", "5/7", "1/7"],
+      "correct": 2,
+      "hints": [
+        {"en": "All the fractions have the same denominator: 7. So which numbers do we compare?", "hi": "सभी भिन्नों का हर समान है: 7। तो हमें किन संख्याओं की तुलना करनी है?"},
+        {"en": "Look at the numerators. Which is the biggest?", "hi": "अंशों को देखिए। सबसे बड़ा अंश कौन-सा है?"}
+      ],
+      "explanation": {"en": "All have denominator 7, so we compare the tops. 5 is the biggest, so 5/7 is the greatest.", "hi": "सबका हर 7 है, इसलिए हम अंशों की तुलना करते हैं। 5 सबसे बड़ा है, इसलिए 5/7 सबसे बड़ा भिन्न है।"}
+    },
+    {
+      "id": "q5",
+      "prompt": {"en": "A bamboo pole is cut into 6 equal pieces. 4 pieces are painted red. What fraction of the pole is NOT painted?", "hi": "बाँस की एक डंडी को 6 बराबर टुकड़ों में काटा गया। 4 टुकड़ों को लाल रंग दिया गया। डंडी का कितना भाग रंगा नहीं गया?"},
+      "visual": {"type": "bar", "num": 4, "den": 6, "color": "peach"},
+      "options": ["4/6", "2/6", "6/2", "2/4"],
+      "correct": 1,
+      "hints": [
+        {"en": "How many pieces are NOT painted? Try 6 − 4.", "hi": "कितने टुकड़े रंगे नहीं गए? 6 − 4 करके देखिए।"},
+        {"en": "The denominator stays 6, because the pole is still cut into 6 equal pieces.", "hi": "हर 6 ही रहेगा, क्योंकि डंडी अब भी 6 बराबर टुकड़ों की है।"}
+      ],
+      "explanation": {"en": "6 − 4 = 2 pieces are not painted. The pole has 6 equal pieces, so 2/6 of it is not painted.", "hi": "6 − 4 = 2 टुकड़े रंगे नहीं गए। डंडी में 6 बराबर टुकड़े हैं, इसलिए उसका 2/6 भाग रंगा नहीं गया।"}
+    }
+  ]
+}
